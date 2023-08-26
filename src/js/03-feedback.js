@@ -31,7 +31,10 @@ onHandleInputForm = event => {
 
 onHadleSubmitForm = event => {
   event.preventDefault();
-  console.log(JSON.parse(localStorage.getItem(FEEDBACK_KEY)));
+  saveMessage = JSON.parse(localStorage.getItem(FEEDBACK_KEY));
+  Object.entries(saveMessage).forEach(([email, msg]) => {
+    console.log(email, msg);
+  });
   event.currentTarget.reset();
   localStorage.removeItem(FEEDBACK_KEY);
 };
