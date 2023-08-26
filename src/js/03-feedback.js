@@ -5,7 +5,7 @@ const FEEDBACK_KEY = 'feedback-form-state';
 
 let feedbackObj = {};
 
-onSavedMsg = () => {
+const onSavedMsg = () => {
   let saveMessage = localStorage.getItem(FEEDBACK_KEY);
   if (saveMessage) {
     saveMessage = JSON.parse(saveMessage);
@@ -19,12 +19,12 @@ onSavedMsg = () => {
 onSavedMsg();
 
 onHandleInputForm = event => {
-  const {
-    elements: { email, message },
-  } = event.currentTarget;
+  // const {
+  //   elements: { email, message },
+  // } = event.currentTarget;
 
-  feedbackObj.email = email.value;
-  feedbackObj.message = message.value;
+  feedbackObj.email = event.currentTarget.email.value;
+  feedbackObj.message = event.currentTarget.message.value;
 
   localStorage.setItem(FEEDBACK_KEY, JSON.stringify(feedbackObj));
 };
