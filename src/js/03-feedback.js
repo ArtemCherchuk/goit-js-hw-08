@@ -41,3 +41,5 @@ const onHadleSubmitForm = event => {
 
 formEl.addEventListener('input', _throttle(onHandleInputForm, 500));
 formEl.addEventListener('submit', onHadleSubmitForm);
+
+//
