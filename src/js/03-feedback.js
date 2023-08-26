@@ -13,6 +13,7 @@ onSavedMsg = () => {
       formEl.elements[name].value = value;
     });
   }
+  return;
 };
 
 onSavedMsg();
