@@ -18,7 +18,7 @@ const onSavedMsg = () => {
 
 onSavedMsg();
 
-onHandleInputForm = event => {
+const onHandleInputForm = event => {
   // const {
   //   elements: { email, message },
   // } = event.currentTarget;
@@ -29,7 +29,7 @@ onHandleInputForm = event => {
   localStorage.setItem(FEEDBACK_KEY, JSON.stringify(feedbackObj));
 };
 
-onHadleSubmitForm = event => {
+const onHadleSubmitForm = event => {
   event.preventDefault();
   saveMessage = JSON.parse(localStorage.getItem(FEEDBACK_KEY));
   Object.entries(saveMessage).forEach(([email, msg]) => {
