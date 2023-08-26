@@ -1,5 +1,6 @@
 * {
   box-sizing: border-box;
+  
 }
 
 body {
@@ -10,9 +11,13 @@ body {
   background-color: #fafafa;
   color: #212121;
   line-height: 1.5;
-}
+  }
 
 img {
   display: block;
   max-width: 100%;
+}
+
+ul {
+  list-style: none;
 }
